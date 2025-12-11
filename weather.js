@@ -411,7 +411,7 @@ document.getElementById("switch").addEventListener("click", () => {
 // saving favaourite cities
 let fav;
 
-document.getElementsByClassName("heart")[0].addEventListener("click", () => {
+document.getElementById("heart").addEventListener("click", () => {
      if(cityname!==undefined){
     if(userlogin!==null){
         ky=`fav${userlogin.username}`;
