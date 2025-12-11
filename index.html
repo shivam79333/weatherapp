@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather details</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="weather.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <i class="fa fa-bars" id="humb" aria-hidden="true"></i>
+   <nav class="navbar">
+    <div class="divlogo">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <span>WeatherApp</span>
+    </div>
+  
+    <div class="divleft">
+        <a href="index.html">Home</a>
+        <a href="#weather-box">Weather</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="login">
+           <a><i class="fa-solid fa-right-to-bracket"></i> Login</a>
+        </div> 
+    </div>
+   </nav>
+
+<div id="top"></div>
+
+<!-- login page -->
+<div class="logintab">
+        <p class="closebtn">&times;</p>
+        <h1>Welcome Back!</h1>
+        <h3>Login</h3>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginbtn">Login</button>
+        <p class="signupredirect">Don't have an account? <a>Sign up</a></p>
+</div>
+<!-- registration page -->
+<div class="registertab">
+        <p class="closebtn">&times;</p>
+        <h1>Welcome </h1>
+        <h3>New Registration</h3>
+        <input type="text" id="fname" placeholder="First Name">
+        <input type="text" id="lname" placeholder="Last Name">
+        <input type="text" id="regusername" placeholder="Username">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="regpassword" placeholder="Password">
+        <input type="text" id="confpassword" placeholder="Confirm Password">
+        <button id="registerbtn">Register</button>
+        <p class="registererror">Invalid username or password. Please try again.</p>
+        <p class="logindirect">Already have an account? <a>Login</a></p>
+</div>
+
+<!-- user details -->
+ <div class="userdetail">
+  <p class="dclose">&times;</p>
+   <h2>User Details</h2>
+  <ul>
+     <li class="dlist" id="detail0"></li>
+     <li class="dlist" id="detail1"></li>
+     <li class="dlist" id="detail2"></li>
+     <li class="dlist" id="detail3"></li>
+  </ul>  
+ </div>
+
+ <!-- greeting -->
+  <p id="greet">Welcome, Please Login</p>
+
+  <!-- HOME (hero) -->
+
+    <div class="hero">
+      <h1>Simple Weather Dashboard</h1>
+      <p>Search any city and get weather details</p>
+    </div>
+
+<!-- search bar -->
+  <div class="searchsection">
+    <div class="divsearch">
+        <input id="navinput" type="text" placeholder="Enter a city name (e.g., London, Mumbai)">
+        <button class="searchbtn"><i class="fa-solid fa-magnifying-glass"></i></button> 
+    </div>
+
+    <div class="searchsuggestions"> 
+     <p>Suggestions:-</p>
+     <div class="suggestionitems">
+       <a id="sugg1"></a>
+       <a id="sugg2" ></a>
+       <a id="sugg3" ></a>
+       <a id="sugg4" ></a>
+       <a id="sugg5" ></a>
+     </div>
+     <p id="suggerror">City not found. Please check the spelling and try again</p>
+    </div>
+    <div class="prewsearched">
+      <div id="prewupper">
+           <p id="prewupper1">Get details according to your current location</p>
+           <p id="favtab">Favourite Cities</p>
+      </div> 
+     <p>Last 5 searched Cities:-</p>
+     <div class="prewsearcheditems">
+       <a id="prew1"></a>
+       <a id="prew2"></a>
+       <a id="prew3"></a>
+       <a id="prew4"></a>
+       <a id="prew5"></a>
+     </div>
+    </div>
+    <div class="favsuggestions"> 
+     <div class="favhead" ><p>Favourite Cities:-</p>
+           <p class="favclose">&times;</p>
+    </div>
+     <div class="favitems">
+       <a id="fav1"></a>
+       <a id="fav2" ></a>
+       <a id="fav3" ></a>
+       <a id="fav4" ></a>
+       <a id="fav5" ></a>
+     </div>
+    </div>
+
+  </div>
+
+     
+  
+
+
+
+  <!-- WEATHER DETAILS -->
+        <p class="error" id="heartp1">First Login</p>
+        <p class="error" id="heartp2">Added Successfully to Favourite Cities List</p>
+        <p class="error" id="heartp3">Removed Successfully from Favourite Cities List</p>
+
+    <div class="weather-box" id="weather-box">
+      <div class="heart">
+        <i class="fa-regular fa-heart" id="heart"></i></i>
+      </div>
+       
+      <div class="left">
+        
+        <h1 id="cityName">City Name</h1>
+        <p id="currentDate">Date</p>
+        <p id="currenttime">Time</p>
+
+        <div class="main-temp">
+          <span id="temperature">--°C</span>
+          <button id="switch">Change to Fahrenheit</button>
+          
+        </div>
+       
+      </div>
+      <div class="iconinfo">
+        <span id="weatherIcon">☁️</span>
+         <p id="weatherDescription">Weather description</p>
+      </div>
+
+      <div class="extra-info">
+        <p>Humidity: <span id="humidity">--%</span></p>
+        <p>Wind Speed: <span id="windSpeed">-- km/h</span></p>
+        <p>Pressure: <span id="pressure">-- hPa</span></p>
+      </div>
+    </div>
+
+
+  <!-- ABOUT SECTION -->
+<div class="about-section" id="about">
+    <h2>About The WeatherApp</h2>
+    <p>
+        This WeatherApp provides real‑time weather details for any city worldwide.  
+        It shows temperature, humidity, wind speed, atmospheric pressure, and a visual weather icon.  
+        You can also view search suggestions, history, and switch between Celsius and Fahrenheit.
+    </p>
+
+
+    <div class="about-icons">
+        <i class="fa-solid fa-cloud-sun"></i>
+        <i class="fa-solid fa-wind"></i>
+        <i class="fa-solid fa-cloud-rain"></i>
+    </div>
+</div>
+
+<!-- CONTACT SECTION -->
+<div class="contact-section" id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-details">
+        <p><i class="fa-solid fa-envelope"></i> shivam79333@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> +91 8084573367</p>
+        <p><i class="fa-solid fa-location-dot"></i> IIT Kharagpur, West Bengal</p>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.instagram.com/shivam79299/" class="social" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/shivam-kumar-67959a377/" target="_blank" class="social"><i class="fa-brands fa-linkedin"></i></a>
+    </div>
+</div>
+
+<a href="#top" id="backToTop">↑</a>
+
+
+    <script src="weather.js"></script>
+</body>
+</html>
